@@ -9,8 +9,8 @@ namespace DAHO.AspitSysGuests.BusinessLayer
 {
     public class BaseHandler
     {
-        private static AspitSysGuestsModel model = new AspitSysGuestsModel();
-        protected AspitSysGuestsModel Model { get => model; }
+        private AspitSysGuestsModel model = new AspitSysGuestsModel();
+        protected AspitSysGuestsModel Model { get => model; set => model = value; }
 
         protected bool SaveChanges()
         {

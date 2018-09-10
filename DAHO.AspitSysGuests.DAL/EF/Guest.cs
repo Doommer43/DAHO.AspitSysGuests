@@ -34,5 +34,7 @@ namespace DAHO.AspitSysGuests.DAL.EF
         public virtual ICollection<Answer> Answers { get; set; }
 
         public virtual Municipality Municipality { get; set; }
+
+        public virtual Department Department { get; set; }
     }
 }
