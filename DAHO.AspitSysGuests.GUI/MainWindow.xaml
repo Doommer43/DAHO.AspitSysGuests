@@ -1,0 +1,35 @@
+﻿<Window x:Class="DAHO.AspitSysGuests.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DAHO.AspitSysGuests.GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="420" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="794">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="TboxUsername" HorizontalAlignment="Left" Height="22" Margin="45,35,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="121"/>
+                    <TextBox x:Name="TboxUsername_Copy" HorizontalAlignment="Left" Height="22" Margin="45,62,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="121"/>
+                    <TextBlock x:Name="TblockUser" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="User:" VerticalAlignment="Top" Width="30"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="173" Margin="274,10,0,0" VerticalAlignment="Top" Width="504">
+                        <Grid HorizontalAlignment="Left" Height="170" Margin="1.4,1.2,0,0" VerticalAlignment="Top" Width="501">
+                            <TextBox x:Name="TboxQuestionnaireTitle" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Width="182"/>
+                            <Button x:Name="BtnCreateQuestionnaire" Content="Create" HorizontalAlignment="Left" Height="26" Margin="206,10,0,0" VerticalAlignment="Top" Width="95"/>
+                            <ComboBox x:Name="CboxSelectQuestionnaire" HorizontalAlignment="Left" Height="22" Margin="10,58,0,0" VerticalAlignment="Top" Width="291"/>
+                            <Button x:Name="BtnNewQuestion" Content="New Question" HorizontalAlignment="Left" Height="24" Margin="10,104,0,0" VerticalAlignment="Top" Width="100" Click="BtnNewQuestion_Click"/>
+                        </Grid>
+                    </Border>
+                    <TextBlock x:Name="TblockCurrentUser" HorizontalAlignment="Left" Height="20" Margin="40,10,0,0" TextWrapping="Wrap" Text="CurrentUser" VerticalAlignment="Top" Width="126"/>
+                    <Button x:Name="BtnLogin" Content="Login" HorizontalAlignment="Left" Height="27" Margin="103,89,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="116" VerticalAlignment="Top" Width="166"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

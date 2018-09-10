@@ -49,7 +49,9 @@
   <ItemGroup>
     <Compile Include="BaseHandler.cs" />
     <Compile Include="GuestHandler.cs" />
+    <Compile Include="MultiChoiceHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionHandler.cs" />
     <Compile Include="QuestionnaireHandler.cs" />
     <Compile Include="StatisticHandler.cs" />
   </ItemGroup>

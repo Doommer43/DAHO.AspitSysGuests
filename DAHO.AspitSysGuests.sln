@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAHO.AspitSysGuests.DAL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAHO.AspitSysGuests.BusinessLayer", "DAHO.AspitSysGuests.BusinessLayer\DAHO.AspitSysGuests.BusinessLayer.csproj", "{F74790EF-2444-4CF7-AD56-5066979B5103}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAHO.AspitSysGuests.GUI", "DAHO.AspitSysGuests.GUI\DAHO.AspitSysGuests.GUI.csproj", "{E36070E6-7EEB-4656-B624-CCF9CE1EBD1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F74790EF-2444-4CF7-AD56-5066979B5103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F74790EF-2444-4CF7-AD56-5066979B5103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F74790EF-2444-4CF7-AD56-5066979B5103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36070E6-7EEB-4656-B624-CCF9CE1EBD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36070E6-7EEB-4656-B624-CCF9CE1EBD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36070E6-7EEB-4656-B624-CCF9CE1EBD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36070E6-7EEB-4656-B624-CCF9CE1EBD1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

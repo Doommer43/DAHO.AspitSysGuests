@@ -19,9 +19,23 @@ namespace DAHO.AspitSysGuests.BusinessLayer
             return Model.Guests.FirstOrDefault(g => g.Id == id);
         }
 
-        public bool SaveGuest(Guest guest)
+        public bool Add(Guest guest)
         {
-            Model.
+            Model.Guests.Add(guest);
+            return SaveChanges();
+        }
+
+        public bool Update(Guest guest)
+        {
+            var result = Model.Guests.Find(guest.Id);
+            result = guest;
+            return SaveChanges();
+        }
+
+        public bool Remove(Guest guest)
+        {
+            Model.Guests.Remove(guest);
+            return SaveChanges();
         }
     }
 }
