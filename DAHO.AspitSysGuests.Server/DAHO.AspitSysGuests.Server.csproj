@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F74790EF-2444-4CF7-AD56-5066979B5103}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAHO.AspitSysGuests.BusinessLayer</RootNamespace>
-    <AssemblyName>DAHO.AspitSysGuests.BusinessLayer</AssemblyName>
+    <ProjectGuid>{1D33A4EE-91B4-4712-BFC2-C3DE7CF9E63A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DAHO.AspitSysGuests.Server</RootNamespace>
+    <AssemblyName>DAHO.AspitSysGuests.Server</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -47,27 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminHandler.cs" />
-    <Compile Include="BaseHandler.cs" />
-    <Compile Include="GuestHandler.cs" />
-    <Compile Include="MultiChoiceHandler.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestionHandler.cs" />
-    <Compile Include="QuestionnaireHandler.cs" />
-    <Compile Include="StatisticHandler.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DAHO.AspitSysGuests.DAL\DAHO.AspitSysGuests.DAL.csproj">
-      <Project>{B7C07504-C488-48D8-9E21-0D0A7FED2644}</Project>
-      <Name>DAHO.AspitSysGuests.DAL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Compile Include="Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAHO.AspitSysGuests.BusinessLayer\DAHO.AspitSysGuests.BusinessLayer.csproj">
+      <Project>{f74790ef-2444-4cf7-ad56-5066979b5103}</Project>
+      <Name>DAHO.AspitSysGuests.BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

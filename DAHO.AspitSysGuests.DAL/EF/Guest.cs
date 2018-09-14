@@ -24,7 +24,9 @@ namespace DAHO.AspitSysGuests.DAL.EF
 
         public int Age { get; set; }
 
-        public int From { get; set; }
+        public int MunicipalityId { get; set; }
+
+        public int DepartmentId { get; set; }
 
         public bool Applying { get; set; }
 
@@ -33,8 +35,8 @@ namespace DAHO.AspitSysGuests.DAL.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Answer> Answers { get; set; }
 
-        public virtual Municipality Municipality { get; set; }
-
         public virtual Department Department { get; set; }
+
+        public virtual Municipality Municipality { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace DAHO.AspitSysGuests.BusinessLayer
 
         public int TotalGuestsToDepartment(string department)
         {
-            return Model.Guests.Where(g => g.Department.Department1.ToLower() == department.ToLower()).ToList().Count;
+            return Model.Guests.Where(g => g.Department.Name.ToLower() == department.ToLower()).ToList().Count;
         }
 
         public int TotalApplyingGuests()
@@ -26,7 +26,7 @@ namespace DAHO.AspitSysGuests.BusinessLayer
 
         public int TotalApplyingGuestsToDepartment(string department)
         {
-            return Model.Guests.Where(g => g.Department.Department1.ToLower() == department.ToLower() && g.Applying == true).ToList().Count;
+            return Model.Guests.Where(g => g.Department.Name.ToLower() == department.ToLower() && g.Applying == true).ToList().Count;
         }
 
         public (int, int) GetMinMaxGuestAge()
@@ -46,7 +46,7 @@ namespace DAHO.AspitSysGuests.BusinessLayer
 
         public int GetUniqueMunicipalities()
         {
-            return Model.Guests.GroupBy(g => g.From).ToList().Count;
+            return Model.Guests.GroupBy(g => g.MunicipalityId).ToList().Count;
         }
 
         public int GetGuestsFromMunicipality(string municipality)

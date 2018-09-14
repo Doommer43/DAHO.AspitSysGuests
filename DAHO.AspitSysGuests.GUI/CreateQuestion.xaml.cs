@@ -21,7 +21,7 @@ namespace DAHO.AspitSysGuests.GUI
     /// </summary>
     public partial class CreateQuestion : Window
     {
-        List<string> choiceList = new List<string>();
+        MultiChoice mc = new MultiChoice();
         Question q;
         public CreateQuestion()
         {
@@ -30,8 +30,11 @@ namespace DAHO.AspitSysGuests.GUI
 
         private void BtnNewMultiChoice_Click(object sender, RoutedEventArgs e)
         {
-            if(ChkBoxIsMulti.IsChecked == true)
-            choiceList.Add(TboxNewMultiChoice.Text);
+            if (ChkBoxIsMulti.IsChecked == true)
+            {
+                mc.Answer = TboxNewMultiChoice.Text;
+                q.MultiChoices.Add(mc);
+            }        
         }
 
         private void BtnNewQuestion_Click(object sender, RoutedEventArgs e)
@@ -41,6 +44,12 @@ namespace DAHO.AspitSysGuests.GUI
 
         private void BtnSaveQuestion_Click(object sender, RoutedEventArgs e)
         {
+            DialogResult = true;
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

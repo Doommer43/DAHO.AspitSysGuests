@@ -28,6 +28,11 @@ namespace DAHO.AspitSysGuests.DAL.EF
                 .WithRequired(e => e.Admin)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Department>()
+                .HasMany(e => e.Guests)
+                .WithRequired(e => e.Department)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Guest>()
                 .HasMany(e => e.Answers)
                 .WithRequired(e => e.Guest)
@@ -42,7 +47,6 @@ namespace DAHO.AspitSysGuests.DAL.EF
             modelBuilder.Entity<Municipality>()
                 .HasMany(e => e.Guests)
                 .WithRequired(e => e.Municipality)
-                .HasForeignKey(e => e.From)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Questionnaire>()

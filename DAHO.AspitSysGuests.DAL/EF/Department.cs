@@ -8,14 +8,22 @@ namespace DAHO.AspitSysGuests.DAL.EF
 
     public partial class Department
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Department()
+        {
+            Guests = new HashSet<Guest>();
+        }
+
         public int Id { get; set; }
 
-        [Column("Department")]
         [Required]
-        public string Department1 { get; set; }
+        public string Name { get; set; }
 
         public int Location { get; set; }
 
         public virtual Municipality Municipality { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Guest> Guests { get; set; }
     }
 }

@@ -10,7 +10,7 @@
         <TextBox x:Name="TboxQuestion" HorizontalAlignment="Left" Height="66" Margin="25,44,0,0" TextWrapping="Wrap" Text="Question" VerticalAlignment="Top" Width="315"/>
         <CheckBox x:Name="ChkBoxIsMulti" Content="Is multiple choice" HorizontalAlignment="Left" Margin="359,44,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BtnSaveQuestion" Content="Done" HorizontalAlignment="Left" Height="35" Margin="505,163,0,0" VerticalAlignment="Top" Width="111" Click="BtnSaveQuestion_Click"/>
-        <Button x:Name="BtnCancel" Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="399,163,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button x:Name="BtnCancel" Content="Cancel" HorizontalAlignment="Left" Height="35" Margin="399,163,0,0" VerticalAlignment="Top" Width="101" Click="BtnCancel_Click"/>
         <TextBox x:Name="TboxNewMultiChoice" HorizontalAlignment="Left" Height="37" Margin="359,73,0,0" TextWrapping="Wrap" Text="Multi choice" VerticalAlignment="Top" Width="181"/>
         <Button x:Name="BtnNewMultiChoice" Content="Add choice" HorizontalAlignment="Left" Height="24" Margin="476,44,0,0" VerticalAlignment="Top" Width="64" Click="BtnNewMultiChoice_Click"/>
         <Button x:Name="BtnNewQuestion" Content="Create question" HorizontalAlignment="Left" Height="35" Margin="239,115,0,0" VerticalAlignment="Top" Width="101" Click="BtnNewQuestion_Click"/>

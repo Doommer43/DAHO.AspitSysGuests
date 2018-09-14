@@ -23,16 +23,40 @@ namespace DAHO.AspitSysGuests.GUI
     public partial class MainWindow : Window
     {
         QuestionnaireHandler QH = new QuestionnaireHandler();
+        AdminHandler AH = new AdminHandler();
+        private Questionnaire questionnaire;
+        private Admin currentAdmin;
         public MainWindow()
         {
             InitializeComponent();
-            List<Questionnaire> questionnaires = QH.GetAllQuestionnares();
-            CboxSelectQuestionnaire.ItemsSource = questionnaires;
+            CboxSelectQuestionnaire.ItemsSource = QH.GetAllQuestionnares();
         }
 
         private void BtnNewQuestion_Click(object sender, RoutedEventArgs e)
         {
-            
+            CreateQuestion qw = new CreateQuestion();
+            qw.ShowDialog();
+            if(qw.DialogResult == true)
+            {
+                questionnaire.Questions.Add(new Question() { Question1 = qw.TboxQuestion.Text, Questionnaire = questionnaire });
+            }
+        }
+
+        private void BtnCreateQuestionnaire_Click(object sender, RoutedEventArgs e)
+        {
+            questionnaire = new Questionnaire() { Title = TboxQuestionnaireTitle.Text };
+        }
+
+        private void BtnQuestionnaireSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            questionnaire.Admin = new Admin() { Id = currentAdmin.Id, Username = currentAdmin.Username, Password = currentAdmin.Password, Questionnaires = currentAdmin.Questionnaires };
+            QH.Add(questionnaire);
+        }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            currentAdmin = AH.LoginAdmin(TboxUsername.Text, TboxPassword.Text);
+            TblockCurrentUser.Text = currentAdmin.Username;
         }
     }
 }
