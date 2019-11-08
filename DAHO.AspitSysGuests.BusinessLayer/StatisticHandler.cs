@@ -29,9 +29,9 @@ namespace DAHO.AspitSysGuests.BusinessLayer
             return Model.Guests.Where(g => g.Department.Name.ToLower() == department.ToLower() && g.Applying == true).ToList().Count;
         }
 
-        public (int, int) GetMinMaxGuestAge()
+        public Tuple<int,int> GetMinMaxGuestAge()
         {
-            return (Min: Model.Guests.OrderByDescending(g => g.Age).FirstOrDefault().Age, Max: Model.Guests.OrderBy(g => g.Age).FirstOrDefault().Age);
+            return Tuple.Create(Model.Guests.OrderByDescending(g => g.Age).FirstOrDefault().Age, Model.Guests.OrderBy(g => g.Age).FirstOrDefault().Age);
         }
 
         public decimal GetAverageGuestAge()
